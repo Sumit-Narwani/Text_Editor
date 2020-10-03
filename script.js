@@ -67,15 +67,17 @@ onload = function () {
         if(operation[0]!==-1){
             temptext.innerHTML = "Performing undo operation<br>"+temptext.innerHTML;
             
-            // Check for the insertion operation (type-0)
+            // Check for the insertion operation (type-0)   
             if(operation[0] === 0){
                 let len = operation[1].length;
 
-                // removing the characters of as much length as inserted in the previous insert operation
+               // removing the characters of as much length as inserted in the previous insert operation	
+
                 textbox.value = textbox.value.substring(0,textbox.value.length-len);
             } 
             
             // Case for deletion thus here we just add/append the deleted element to the textbox value1
+
             else{
                 textbox.value += operation[1];
             }
